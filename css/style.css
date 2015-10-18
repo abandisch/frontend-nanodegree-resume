@@ -214,6 +214,11 @@ span {
 }
 
 /* Custom Additions - AlexB */
+
+#header h1 {
+  white-space: nowrap;
+}
+
 h2.flex-item {
   width: 100%;
 }
@@ -240,6 +245,7 @@ h2.flex-item {
   padding: 10px 0;
   cursor: pointer;
   text-align: right;
+  position: relative;
 }
 
 #drawer {
@@ -247,17 +253,17 @@ h2.flex-item {
 }
 
 #topContacts {
-  min-width: 300px;
+  min-width: 250px;
   display: inline-block;
   position: absolute;
   z-index: 99;
-  right: 10px;
+  right: 5%;
   background-color: rgba(54, 54, 54, 0.9);
 }
 
 #topContacts li {
   padding: 5px 0;
-  font-size: 18px;
+  font-size: 0.9em;
 }
 
 @media only screen and (min-width: 465px) {
@@ -278,7 +284,7 @@ h2.flex-item {
   }
 
   #topContacts li {
-    font-size: 16px;
+    font-size: 1em;
   }
 
   #contact-details {
