@@ -224,3 +224,14 @@ h2.flex-item {
   margin-bottom: 20px;
   width: 450px;
 }
+
+#role {
+  color: #f7e2c3;
+  display: block;
+}
+
+@media only screen and (min-width: 465px) {
+  #role {
+    display: inline-block;
+  }
+}
