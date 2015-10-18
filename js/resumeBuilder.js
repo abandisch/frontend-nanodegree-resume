@@ -10,7 +10,7 @@ var bio = {
         "location": "Brisbane, Australia"
     },
     "welcomeMessage": "An ambitious problem solver with a passion for Front-End Web Development!",
-    "skills": ["Bootstrap 3", "HTML", "JQuery", "CSS", "less", "PHP", "GruntJS", "LAMP Stack"],
+    "skills": ["Bootstrap 3", "HTML", "JQuery", "CSS", "less", "PHP", "Grunt", "LAMP Stack"],
     "biopic": "http://i.imgur.com/CXkInEz.jpg"
 
 };
@@ -61,6 +61,10 @@ bio.display = function() {
         var formattedContact = HTMLcontactGeneric.replace("%contact%", icon).replace("%data%", contactData);
         $footerContacts.append(formattedContact);
     });
+
+    // Mobile view - Add 'Contact Details' button to show contact details
+    $("#header").find("hr").after(contactDetailsButton);
+    $("#topContacts").wrap(drawer);
 
 };
 
@@ -193,11 +197,18 @@ education.display();
 // Display Google Map with bouncing markers on each location
 $("#mapDiv").append(googleMap);
 
+// Mobile view - Add event handler for clicking on button
+$("#contact-details").on("click", function(event) {
+    $("#drawer").fadeToggle("fast");
+    $(this).toggleClass('clicked');
+    event.stopPropagation();
+});
 
-
-
-
-
+// Mobile view - Add event handler for main div to
+$("#main").on("click", function(event) {
+    $("#drawer").fadeOut("fast");
+    $("#contact-details").removeClass("clicked");
+});
 
 /* International Button Exercise - Commented out, as this is not required for the resume ... at least I'm pretty sure it's not */
 /*

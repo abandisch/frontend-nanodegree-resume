@@ -9,6 +9,8 @@
 
 /* Custom Additions */
 var fontAwesomeIcon = '<i class="fa %data%"></i>';
+var contactDetailsButton = '<p id="contact-details">Contact Details <i class="fa fa-bars"></i></p>';
+var drawer = '<div id="drawer"></div>';
 
 /*
  These are HTML strings. As part of the course, you'll be using JavaScript functions
@@ -233,12 +235,12 @@ function initializeMap() {
     // bounds.extend() takes in a map location object
     bounds.extend(new google.maps.LatLng(lat, lon));
     // fit the map to the new marker
-    //map.fitBounds(bounds);
+    map.fitBounds(bounds);
     // center the map
     map.setCenter(bounds.getCenter());
 
     // Set custom zoom level
-    map.setZoom(10);
+    //map.setZoom(10);
   }
 
   /*

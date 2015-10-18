@@ -101,7 +101,7 @@ a {
 
 #skills-h3 {
   color: #f5ae23;
-  display: none;
+  /*display: none;*/
 }
 
 .orange {
@@ -230,8 +230,58 @@ h2.flex-item {
   display: block;
 }
 
+.clicked {
+  color: #976014 !important;
+}
+
+#contact-details {
+  color: #dc8c1d;
+  font-size: 1.5em;
+  padding: 10px 0;
+  cursor: pointer;
+  text-align: right;
+}
+
+#drawer {
+  display: none;
+}
+
+#topContacts {
+  min-width: 300px;
+  display: inline-block;
+  position: absolute;
+  z-index: 99;
+  right: 10px;
+  background-color: rgba(54, 54, 54, 0.9);
+}
+
+#topContacts li {
+  padding: 5px 0;
+  font-size: 18px;
+}
+
 @media only screen and (min-width: 465px) {
   #role {
     display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 860px) {
+  #drawer {
+    display: block !important;
+  }
+
+  #topContacts {
+    position: static;
+    display: flex;
+    background-color: transparent;
+  }
+
+  #topContacts li {
+    font-size: 16px;
+  }
+
+  #contact-details {
+    display: none;
   }
 }
