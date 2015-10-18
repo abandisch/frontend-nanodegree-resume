@@ -212,3 +212,15 @@ span {
     display: block;
   }
 }
+
+/* Custom Additions - AlexB */
+h2.flex-item {
+  width: 100%;
+}
+
+.project-entry.flex-item {
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  width: 450px;
+}
