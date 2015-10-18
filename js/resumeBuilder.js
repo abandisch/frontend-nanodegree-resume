@@ -206,8 +206,12 @@ $("#contact-details").on("click", function(event) {
 
 // Mobile view - Add event handler for main div to hide contact details
 $("#main").on("click", function(event) {
-    $("#drawer").fadeOut("fast");
-    $("#contact-details").removeClass("clicked");
+    if ($("#contact-details").hasClass("clicked")) {
+        $("#contact-details").removeClass("clicked");
+        $("#drawer").fadeOut("fast");
+    }
+
+
 });
 
 /* International Button Exercise - Commented out, as this is not required for the resume ... at least I'm pretty sure it's not */
