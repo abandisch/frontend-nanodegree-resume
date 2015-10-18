@@ -197,14 +197,14 @@ education.display();
 // Display Google Map with bouncing markers on each location
 $("#mapDiv").append(googleMap);
 
-// Mobile view - Add event handler for clicking on button
+// Mobile view - Add event handler for clicking on 'contact-details' button
 $("#contact-details").on("click", function(event) {
     $("#drawer").fadeToggle("fast");
     $(this).toggleClass('clicked');
     event.stopPropagation();
 });
 
-// Mobile view - Add event handler for main div to
+// Mobile view - Add event handler for main div to hide contact details
 $("#main").on("click", function(event) {
     $("#drawer").fadeOut("fast");
     $("#contact-details").removeClass("clicked");
